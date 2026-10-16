@@ -28,13 +28,14 @@ git commit -m "Aggiornamento contenuti sito - %date% %time%"
 if errorlevel 1 goto :error
 
 echo Pubblico su GitHub...
-git push origin main
+git branch -M main
+git push -u origin main
 if errorlevel 1 goto :error
 
 echo.
 echo ============================================
-echo  Fatto! Il sito si aggiornera' su
-echo  https://seriousjoker-pro.github.io/
+echo  Fatto! Il sito si aggiornerà su
+echo  https://marcopaleari.github.io/
 echo  entro un paio di minuti.
 echo ============================================
 pause

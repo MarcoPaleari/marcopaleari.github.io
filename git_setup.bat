@@ -29,7 +29,7 @@ git config user.name "Marco Paleari"
 git config user.email "seriousjoker@libero.it"
 
 echo Collego il repository GitHub esistente...
-git remote add origin https://github.com/seriousjoker-pro/seriousjoker-pro.github.io.git
+git remote add origin https://github.com/MarcoPaleari/marcopaleari.github.io.git
 if errorlevel 1 goto :error
 
 echo Scarico la storia gia' presente su GitHub...
@@ -46,13 +46,24 @@ git merge origin/main --allow-unrelated-histories -m "Merge storia esistente del
 if errorlevel 1 (
   echo.
   echo Trovati conflitti tra la versione locale e quella online.
-  echo Questo e' normale ed atteso per style.css e songs.json: tengo la TUA versione locale, piu' recente.
+  echo Questo e' normale ed atteso per index.html, style.css e songs.json ^(anche solo per fine riga LF/CRLF^): tengo la TUA versione locale, piu' recente.
+  git checkout --ours index.html
   git checkout --ours style.css
   git checkout --ours songs.json
-  git add style.css songs.json
+  git add index.html style.css songs.json
   git commit --no-edit
-  if errorlevel 1 goto :error
+  if errorlevel 1 (
+    echo.
+    echo Ci sono altri conflitti oltre a index.html/style.css/songs.json.
+    echo Aprili con un editor, cerca le righe "^<^<^<^<^<^<^<", risolvi a mano,
+    echo poi lancia: git add . ^&^& git commit
+    goto :error
+  )
 )
+
+echo Allineo il nome del branch locale a "main" (come su GitHub)...
+git branch -M main
+git branch --set-upstream-to=origin/main main >nul 2>&1
 
 echo.
 echo ============================================
