@@ -118,7 +118,8 @@ header p {
 }
 
 #filterTema,
-#filterGenere {
+#filterGenere,
+#sortSongs {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   color: #4b5563;

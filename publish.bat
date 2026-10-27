@@ -15,7 +15,7 @@ echo ============================================
 echo.
 
 echo Aggiungo le modifiche ai file del sito pubblico...
-git add index.html style.css songs.json copertine spotify_codes LICENSE README.md "Marco Paleari.JPEG"
+git add index.html style.css sort-songs.js songs.json copertine spotify_codes LICENSE README.md "Marco Paleari.JPEG"
 
 git diff --cached --quiet
 if not errorlevel 1 (

@@ -35,6 +35,14 @@
       <select id="filterGenere" onchange="onGenereChange(this.value)">
         <option value="all">Genere: tutti</option>
       </select>
+      <select id="sortSongs" onchange="onSortChange(this.value)" aria-label="Ordina canzoni">
+        <option value="publication-desc">Pubblicazione: recenti prima</option>
+        <option value="publication-asc">Pubblicazione: meno recenti prima</option>
+        <option value="title-asc">Titolo: A–Z</option>
+        <option value="title-desc">Titolo: Z–A</option>
+        <option value="year-desc">Anno: più recenti prima</option>
+        <option value="year-asc">Anno: meno recenti prima</option>
+      </select>
     </div>
 
     <!-- GRIGLIA DELLE CARD -->
@@ -91,8 +99,10 @@
     </div>
   </footer>
 
+  <script src="sort-songs.js"></script>
   <script>
     let currentSongs = [];
+    let allSongs = [];
 
     function escapeHtml(str) {
       const div = document.createElement('div');
@@ -137,10 +147,9 @@
         if (!response.ok) {
           throw new Error('Impossibile caricare il file JSON delle canzoni');
         }
-        const songs = await response.json();
-        renderCards(songs);
-        buildFilters(songs);
-        applyVisibility();
+        allSongs = await response.json();
+        buildFilters(allSongs);
+        renderSortedSongs();
       } catch (error) {
         console.error("Errore:", error);
         document.getElementById('songs-grid').innerHTML = `<p style="grid-column: 1/-1; text-align: center;">Errore nel caricamento delle canzoni. Assicurati che songs.json sia presente nella stessa cartella.</p>`;
@@ -175,6 +184,12 @@
         `;
         grid.appendChild(card);
       });
+    }
+
+    function renderSortedSongs() {
+      const order = document.getElementById('sortSongs').value;
+      renderCards(sortSongs(allSongs, order));
+      applyVisibility();
     }
 
     let sourceCardEl = null; // card di origine, per l'animazione "piccola -> grande" e viceversa
@@ -393,6 +408,11 @@
       currentGenere = value;
       expanded = false;
       applyVisibility();
+    }
+
+    function onSortChange() {
+      expanded = false;
+      renderSortedSongs();
     }
 
     // Mostra solo le prime CARD_LIMIT card che rispettano i filtri attivi;
