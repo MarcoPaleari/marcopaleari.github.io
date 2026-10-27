@@ -13,7 +13,7 @@
     return direction * (left < right ? -1 : left > right ? 1 : fallback);
   }
 
-  function sortSongs(songs, order) {
+  function sortSongs(songs, order, today = new Date().toISOString().slice(0, 10)) {
     const direction = order.endsWith('-asc') ? 1 : -1;
     const field = order.replace(/-(asc|desc)$/, '');
 
@@ -31,6 +31,15 @@
             direction,
             fallback,
           );
+        }
+        if (field === 'publication') {
+          const publicationGroup = date => !date ? 2 : date <= today ? 0 : 1;
+          const leftGroup = publicationGroup(left.song.date);
+          const rightGroup = publicationGroup(right.song.date);
+          if (leftGroup !== rightGroup) return leftGroup - rightGroup;
+          if (leftGroup === 1) {
+            return compareNullable(left.song.date, right.song.date, 1, fallback);
+          }
         }
         return compareNullable(left.song.date, right.song.date, direction, fallback);
       })
