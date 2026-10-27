@@ -240,7 +240,7 @@
     "cover": "copertine/daniele_silvestri_a_bocca_chiusa.png",
     "spotify_code": "spotify_codes/daniele_silvestri_a_bocca_chiusa_spotify_code.png",
     "spotify_link": "https://open.spotify.com/intl-it/track/2bBfij1zEsNlhQ5uxLJwIo",
-    "youtube_link": "",
+    "youtube_link": "https://www.youtube.com/watch?v=xpdsirdCxj8",
     "decade": "2010s",
     "country": "Italia",
     "genere": "",
@@ -739,6 +739,30 @@
   },
   {
     "id": 32,
+    "artist": "Lesley Gore",
+    "title": "You Don't Own Me",
+    "year": "1963",
+    "album": "Lesley Gore Sings of Mixed-Up Hearts",
+    "cover": "copertine/lesley_gore_you_don_t_own_me.png",
+    "spotify_code": "spotify_codes/lesley_gore_you_don_t_own_me_spotify_code.png",
+    "spotify_link": "https://open.spotify.com/track/47tshHQKZPza7zf3BSKfJS",
+    "youtube_link": "https://www.youtube.com/watch?v=cTpvirQ-hPA",
+    "decade": "1960s",
+    "country": "Estero",
+    "genere": "",
+    "tags": [
+      "autonomia",
+      "relazioni",
+      "confini",
+      "controllo"
+    ],
+    "content": "#SpecialeXFactorLive\n\nIl primo Live di X Factor ha portato sul palco due voci particolarmente forti, entrambe alle prese con canzoni che meritano di essere riascoltate oltre la performance.\n\nUna delle due era camilla. La sua interpretazione mi ha colpito particolarmente: non perché voglia dire che sia stata in assoluto la più forte della serata, ma forse proprio perché non me l’aspettavo.\n\nVorrei però soprassedere sui giudizi personali sulla puntata e sui concorrenti — e soprattutto evitare spoiler per chi non l’ha ancora vista. Mi basta dire che alcune performance hanno il potere di riportarci verso una canzone e costringerci ad ascoltarla davvero.\n\nOggi vi parlo di:\n\n**🎧 You Don't Own Me**\n**👤 Lesley Gore**\n**📅 1963**\n**💿 Lesley Gore Sings of Mixed-Up Hearts**\n\nIl titolo è già una frase intera.\n\n“Non mi possiedi.”\n\nNon dice: non ti amo.\nNon dice: non ho bisogno di nessuno.\nDice qualcosa di più preciso: l’amore non può diventare il diritto di decidere per l’altra persona.\n\nNon può stabilire dove andare, che cosa dire, come vestirsi, chi frequentare. Non può chiedere di essere più piccola, più silenziosa, più gestibile. E non può trasformare qualcuno in un oggetto da mostrare agli altri.\n\nOggi parole come queste possono sembrarci familiari. Ma nel 1963, dentro un pop pieno di canzoni sulla devozione romantica e sul sogno di essere scelte, erano tutt’altro che scontate.\n\nLesley Gore aveva appena diciassette anni quando la incise. E cantava con una fermezza sorprendente che essere giovani, innamorate o in una relazione non significa rinunciare alla libertà di essere sé stesse.\n\n**Curiosità:** il brano fu prodotto da Quincy Jones e arrivò al secondo posto della classifica statunitense. In un’epoca in cui il pop raccontava spesso ragazze in attesa, gelose o completamente devote, You Don't Own Me metteva al centro una ragazza che non chiedeva il permesso di vivere la propria vita.\n\n**Perché ne parliamo su EquaVoce?** Perché il controllo non si presenta sempre con parole esplicite o gesti immediatamente riconoscibili. A volte si traveste da premura. Da gelosia. Da “lo faccio perché ci tengo”. Da un’idea di coppia in cui una persona pensa di avere il diritto di stabilire limiti per l’altra.\n\nMa una relazione sana non chiede di sparire, di ridursi o di smettere di scegliere.\n\nChiede rispetto.\n\nE forse è questo che rende You Don't Own Me ancora così potente: non è una canzone contro l’amore. È una canzone contro l’idea che amare significhi possedere.\n\n**🎧 Se la riascoltate, provate a pensare a quante volte la libertà dentro una relazione viene scambiata per distanza. E a quante volte, invece, è proprio ciò che permette a due persone di scegliersi davvero.**",
+    "curiosity": "Lesley Gore incise il brano nel 1963 a soli 17 anni. Prodotto da Quincy Jones, arrivò al secondo posto della classifica statunitense: in un pop pieno di canzoni sulla devozione romantica, una ragazza adolescente che rivendicava di poter vivere e parlare come voleva era tutt'altro che scontata.",
+    "quote": "Don't try to change me in any way",
+    "date": "2026-10-22"
+  },
+  {
+    "id": 33,
     "artist": "Sister Sledge",
     "title": "We Are Family",
     "year": "1979",
@@ -762,7 +786,7 @@
     "date": "2026-09-25"
   },
   {
-    "id": 33,
+    "id": 34,
     "artist": "Måneskin",
     "title": "Torna a casa",
     "year": "2018",
@@ -786,7 +810,7 @@
     "date": ""
   },
   {
-    "id": 34,
+    "id": 35,
     "artist": "Radiohead",
     "title": "Creep",
     "year": "1992",
